@@ -7,20 +7,19 @@ using System.Threading.Tasks;
 
 namespace ContosoUniversity.Models
 {
-    public class Instructor
+    public class Instructor : Person
     {
-        public int ID { get; set; }
+        //public int ID { get; set; }
+        //[Required]
+        //[Display(Name = "Last Name")]
+        //[StringLength(50)]
+        //public string LastName { get; set; }
 
-        [Required]
-        [Display(Name="Last Name")]
-        [StringLength(50)]
-        public string LastName { get; set; }
-
-        [Required]
-        [Column("FirstName")]
-        [Display(Name = "First Name")]
-        [StringLength(50)]
-        public string FirstMidName { get; set; }
+        //[Required]
+        //[Column("FirstName")]
+        //[Display(Name = "First Name")]
+        //[StringLength(50)]
+        //public string FirstMidName { get; set; }
 
 
         [DataType(DataType.Date)]
@@ -28,16 +27,16 @@ namespace ContosoUniversity.Models
         [Display(Name = "Hire Date")]
         public DateTime HireDate { get; set; }
 
-        [Display(Name = "Full Name")]
-        public string FullName
-        {
-            get { return LastName + ", " + FirstMidName; }
-        }
+        //[Display(Name = "Full Name")]
+        //public string FullName
+        //{
+        //    get { return LastName + ", " + FirstMidName; }
+        //}
 
         public ICollection<CourseAssignment> CourseAssignments { get; set; }
         public OfficeAssignment OfficeAssignment { get; set; }
 
     }
 
-    
+
 }
